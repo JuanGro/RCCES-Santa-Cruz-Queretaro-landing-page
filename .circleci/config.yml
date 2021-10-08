@@ -15,7 +15,7 @@ jobs:
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: bucket
-          to: 's3://rcces-santa-cruz-queretaro-landing-page'
+          to: 's3://rcces-santa-cruz-queretaro-landing-page/'
       - aws-s3/copy:
           arguments: '--dryrun'
           from: ./
