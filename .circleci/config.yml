@@ -7,6 +7,7 @@ jobs:
       - image: 'cimg/python:3.6'
     steps:
       - checkout
+      - run: mkdir bucket && cp -r index.html assets bucket
       - aws-s3/sync:
           arguments: |
             --acl public-read \
@@ -14,11 +15,11 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          from: ./
+          from: ./bucket
           to: 's3://rcces-santa-cruz-queretaro-landing-page'
       - aws-s3/copy:
           arguments: '--dryrun'
-          from: ./
+          from: ./bucket
           to: 's3://rcces-santa-cruz-queretaro-landing-page'
 workflows:
   s3-example:
