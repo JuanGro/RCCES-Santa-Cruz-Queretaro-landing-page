@@ -18,4 +18,4 @@ _This repository contains the landing page for RCCES Santa Cruz Querétaro commu
 
 The deployment is managed by [Circle CI](https://circleci.com).
 
-[Production app](renovacion.santacruzqueretaro.com)
+[Production app](https://renovacion.santacruzqueretaro.com)
